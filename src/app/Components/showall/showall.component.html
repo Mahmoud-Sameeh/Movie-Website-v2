@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <h2 class="text-center titlename">Movies List</h2>
+    <div class="row justify-content-center"> 
+<span *ngFor="let m of movies">
+<app-moviecard [movie]="m"></app-moviecard>
+</span>
+</div>
+  
+<!-- <div class="row col-md-12 justify-content-center">
+  <div class="card credits col-md-4 ">
+      <div class="card-body">
+          <p>Made with <i class="fas fa-heart"></i> by Sukhmeet Singh.</p>
+      </div>
+  </div>
+</div> -->
+</div>

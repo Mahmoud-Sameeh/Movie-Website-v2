@@ -1,0 +1,57 @@
+<div class="wrapper d-flex align-items-stretch">
+  <nav id="sidebar"style ="background-color: black;">
+    <div class="custom-menu">
+      <button type="button" id="sidebarCollapse" (click)="addliderclass()" class="btn btn-primary">
+        <i class="fa fa-bars"></i>
+        <span class="sr-only">Toggle Menu</span>
+      </button>
+    </div>
+    <div style="background-color: black;" class="p-4">
+      <h1><a href="https://www.linkedin.com/in/mahmoud-sameeh/" class="logo">Movies Night <span>Linkedin</span></a></h1>
+      <ul class="list-unstyled components mb-5">
+      
+      
+        <li>
+          <a [routerLink]="['showall']"><span class="fa fa-home mr-3"></span> Movies </a>
+        </li>
+       
+        
+        <li>
+          <a [routerLink]="['addmovie/']"><span class="fa fa-plus mr-3"></span> Add Movie</a>
+        </li>
+        <li>
+          <a [routerLink]="['deletemovie/']"><span class="fas fa-trash-alt mr-3"></span> Delete Movie</a>
+        </li>
+        <li>
+          <a [routerLink]="['update']"><span class="fas fa-edit mr-3"></span> Edit Movie</a>
+        </li>
+     
+      
+        
+        <li>
+          <a href="#"> <span class="fas fa-phone-volume mr-4"></span> Contacts</a>
+        </li>
+      </ul>
+
+      
+
+      <div class="footer">
+        <p>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>
+            document.write(new Date().getFullYear());
+          </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by Full Stack Developer 
+          <a href="https://colorlib.com" target="_blank">Mahmoud Ali </a>,
+          <a href="https://colorlib.com" target="_blank">Nermen Nesser</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5 pt-5"> 
+     <router-outlet></router-outlet>
+  </div>
+</div>

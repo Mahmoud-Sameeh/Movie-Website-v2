@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col sha">
+            <h5 > Title: <b>{{  movieobjdetails.title}}</b>.</h5>
+            <h5>Duration: <b>  {{movieobjdetails.duration}}   <small>min</small></b>.</h5>
+            <h5>Studio: <b> {{movieobjdetails.studio.name}}</b>.</h5>
+            <h5>Studio Founder: <b> {{movieobjdetails.studio.founded}}</b>.</h5>
+            <h5> Director First Name : <b> {{movieobjdetails.director.firstName}}</b>.</h5>
+            <h5> Director Second Name : <b> {{movieobjdetails.director.secondName}}</b>.</h5>
+             <br>
+             <h4>
+                <span style="margin-left:2px" class="badge rounded-pill bg-danger" *ngFor="let e of movieobjdetails.categories">{{e.categoryName}}</span> 
+
+               
+
+             </h4>
+            <a class="btn btn-success" routerLink="/watchmovie/{{movieobjdetails.id}}"> 
+                Watch
+            </a>
+            
+            <button class="btn btn-info">
+                Download
+            </button>
+        </div>
+        <div style="box-shadow: 5px 10px 10px 5px grey;" class="col">
+            <img src="{{movieobjdetails.imgdir}}" class="img-fluid" alt="...">   
+        </div>
+   
+    </div>
+</div>

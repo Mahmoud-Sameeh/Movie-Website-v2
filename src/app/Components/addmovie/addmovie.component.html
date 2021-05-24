@@ -1,0 +1,173 @@
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Add Movie</h4>
+            <h2 class="card-description bg-info btn">
+             Add Movie from <span style="color:red;background-color: inherit;">Youtube</span> 
+            </h2>
+            <form  class="forms-sample" >
+              <div class="form-group row">
+                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Title</label>
+                <div class="col-sm-9">
+    <input #addtitle type="text" class="form-control" id="exampleInputUsername2" placeholder="Title">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Duration</label>
+                <div class="col-sm-9">
+    <input #addduration type="text" class="form-control" id="exampleInputEmail2" placeholder="enter mins">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exampleInputMobile" class="col-sm-3 col-form-label">Description</label>
+                <div class="col-sm-9">
+       <input #description type="text" class="form-control" id="exampleInputMobile" placeholder="Description">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="exampleInputMobile" class="col-sm-3 col-form-label">Movie Link</label>
+                <div class="col-sm-9">
+       <input #MovieLink type="text" class="form-control" id="exampleInputMobile" placeholder="Movie Link">
+                </div>
+              </div>
+              <!-- <div class="form-group row">
+                <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Upload Image</label>
+                <div class="col-sm-9">
+  <input type="text" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                </div>
+              </div> -->
+              <div class="form-group row">
+                <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">studio Name</label>
+                <div class="col-sm-9">
+     <input #studio type="text" class="form-control" id="exampleInputConfirmPassword2" placeholder="studio Name">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="ex" class="col-sm-3 col-form-label">director Name</label>
+                <div class="col-sm-9">
+   <input #director type="text" class="form-control" id="ex" placeholder="Director Name">
+                </div>
+              </div>
+              <div class="form-group row">
+             
+                  
+            </div>
+              <div class="form-group">
+                 <input type="file"  #image (change)="openFile($event)" name="img[]" class="file-upload-default btn btn-secondary" placeholder="image">
+              
+              </div>
+           
+              
+              <button type="button" (click)="addmoviefrom(addtitle.value,addduration.value,description.value,image.value,studio.value,director.value,MovieLink.value)" class="btn btn-danger">Submit</button>&nbsp;
+              <button type="button" (click)="RestMovie(addtitle,addduration,description,image,studio,director)" class="btn btn-danger">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <img src="https://blog.hubspot.com/hubfs/Sales_Blog/famous-movie-quotes.jpg"  id="addmovieimage"class="img-fluid" alt="...">   
+
+          </div>
+        </div>
+      </div>
+</div>
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Add Movie</h4>
+          <h2 class="card-description bg-info btn">
+           Add Movie  <span style="color:red;background-color: inherit;">Local</span> 
+          </h2>
+          <form  class="forms-sample" >
+            <div class="form-group row">
+              <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Title</label>
+              <div class="col-sm-9">
+  <input #addtitle type="text" class="form-control" id="exampleInputUsername2" placeholder="Title">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Duration</label>
+              <div class="col-sm-9">
+  <input #addduration type="number" class="form-control" id="exampleInputEmail2" placeholder=" mins">
+              </div> 
+            </div> 
+            <div class="form-group row"> 
+              <label for="exampleInputMobile" class="col-sm-3 col-form-label">Movie Descrption</label>
+              <div class="col-sm-9">
+     <input #description type="text" class="form-control" id="exampleInputMobile" placeholder="Description">
+              </div>
+            </div>
+            <div class="form-group row">
+               <div class="col-sm-9">
+  <input  #MovieLink class="form-control" id="exampleInputMobile"  type='file' (change)="onSelectFile($event)" />
+               </div>
+            </div>
+            <!-- <div class="form-group row">
+              <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Upload Image</label>
+              <div class="col-sm-9">
+<input type="text" class="form-control" id="exampleInputPassword2" placeholder="Password">
+              </div>
+            </div> -->
+            <div class="form-group row">
+              <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">studio Name</label>
+              <div class="col-sm-9">
+   <input #studio type="text" class="form-control" id="exampleInputConfirmPassword2" placeholder="studio Name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="ex" class="col-sm-3 col-form-label">director Name</label>
+              <div class="col-sm-9">
+ <input #director type="text" class="form-control" id="ex" placeholder="Director Name">
+              </div>
+            </div>
+            <div class="form-group row">
+           
+                
+          </div>
+            <div class="form-group">
+               <input type="file"  #image (change)="openFile2($event)" name="img[]" class="file-upload-default btn btn-secondary" placeholder="image">
+            
+            </div>
+         
+            
+            <button type="button" (click)="addmoviefrom2(addtitle.value,addduration.value,description.value,image.value,studio.value,director.value,MovieLink.value)" class="btn btn-danger">Submit</button>&nbsp;
+            <button type="button" (click)="RestMovie2(addtitle,addduration,description,image,studio,director)" class="btn btn-danger">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body imgcover">
+          <img src="https://blog.hubspot.com/hubfs/Sales_Blog/famous-movie-quotes.jpg"  id="addmovieimage2"class="img-fluid" alt="...">   
+
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="card-body imgcover">
+          <h3>Upload Video</h3>
+             <video allowfullscreen id="videouploader" [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br/>
+  
+         </div>
+        
+      </div>
+    </div>
+</div>
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+<button type="submit" [disabled]="!profileForm.valid" class="btn btn-success"></button>
+</form> -->
